@@ -66,12 +66,13 @@
   - **プログラミング言語**: Kotlin
   - **アーキテクチャ**: MVVM (Model-View-ViewModel)
   - **非同期処理**: Kotlin Coroutines
-  - **通信**: Retrofit2, OkHttp3
+  - **通信**: Retrofit2, OkHttp3, RxJava3
   - **テスト**: JUnit（ローカルテスト）, Espresso（インストルメンテーションテスト）
-  - **使用ライブラリ**: AndroidX Jetpack（Activity, ViewModel, LiveDataなど）
+  - **使用ライブラリ**: AndroidX>Jetpack（Activity, ViewModel, LiveDataなど）, Material Components
   - **UIフレームワーク**: XMLレイアウト
   - **認証・セキュリティ**: ProGuard, HTTPS通信
   - **DI（依存性注入）**: 未導入
+  - **KMP**: 未導入
   - **モニタリング・クラッシュ解析**: Firebase Crashlytics
   - **CI / CD**: GitHub Actions
   - **バージョン管理**: Git + GitHub
