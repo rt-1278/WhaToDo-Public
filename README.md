@@ -57,4 +57,44 @@
 
 **5. サポート情報**  
 - お問い合わせメールアドレスは[こちら](<mailto:mailto:r.tianzhong1278@gmail.com>)（担当者：田中 ）
+
+
+**6. Androidアプリ 技術スタック & 特徴まとめ**
+
+  6.1 🔧 技術スタック一覧
+
+  - **プログラミング言語**: Kotlin
+  - **アーキテクチャ**: MVVM (Model-View-ViewModel)
+  - **非同期処理**: Kotlin Coroutines
+  - **通信**: Retrofit2, OkHttp3
+  - **テスト**: JUnit（ローカルテスト）, Espresso（インストルメンテーションテスト）
+  - **使用ライブラリ**: AndroidX Jetpack（Activity, ViewModel, LiveDataなど）
+  - **UIフレームワーク**: XMLレイアウト
+  - **認証・セキュリティ**: ProGuard, HTTPS通信
+  - **DI（依存性注入）**: 未導入
+  - **モニタリング・クラッシュ解析**: Firebase Crashlytics
+  - **CI / CD**: GitHub Actions
+  - **バージョン管理**: Git + GitHub
+
+  6.2 ✨ アプリの特徴と今後の展望
+
+  - 現在は **APIサーバーとの通信** によりデータを取得・表示
+  - ローカルデータの保存には **SharedPreferences** を使用（ユーザーIDなど）
+  - データベース（Room）は現在未使用だが、**今後オフライン対応のため導入予定**
+  - アプリ利用するには、位置情報の取得とネットワーク環境が必須
+  
+  #### 今後導入予定の技術・改善案
+
+  - **Jetpack Compose** による宣言的UIの実装
+  - **Repositoryパターン** によるデータ取得の抽象化
+  - **WorkManager** によるバックグラウンド非同期処理の管理
+  - **Android Keystore** による認証情報の安全な保存
+  - **証明書ピンニング** によるセキュリティ強化
+  - **Room** によるローカルDBの導入（オフライン対応）
+  - **Realm** によるNoSQLベースのデータ保存
+  - アーキテクチャは以下の **3レイヤー構成**：
+    - UIレイヤー
+    - ドメインレイヤー（UseCase）
+    - データレイヤー（Repository）
+  - **ViewModelの肥大化を防ぐ** ため、ビジネスロジックは UseCase に記述
    
